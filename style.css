@@ -1,0 +1,135 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffd1ff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* KONTAINER KARTU (PENTING AGAR TOMBOL TIDAK HILANG) */
+.card {
+    position: relative; /* KUNCI UTAMA: Mengurung tombol di dalam kotak */
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    max-width: 400px;
+    width: 90%;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+/* Styling Gambar Windah & GIF */
+.gif-sticker {
+    width: 150px; /* Ukuran gambar */
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #ff4d6d;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Tombol */
+button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: white;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Memberi ruang untuk tombol bergerak */
+    position: static; /* Biarkan statis awalnya */
+}
+
+#btn-yes {
+    background: #4CAF50;
+    color: white;
+    margin-right: 10px;
+    z-index: 20; /* Tombol YES harus di bawah tombol NO jika bertumpuk */
+}
+
+/* Tombol NO (PENTING) */
+#btn-no {
+    background: #e0e0e0;
+    color: #555;
+    z-index: 999; /* Selalu di atas agar terlihat */
+    transition: top 0.3s ease, left 0.3s ease; /* Gerakan halus */
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Animasi Background Hati */
+.bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.heart-bg {
+    position: absolute;
+    bottom: -50px;
+    font-size: 30px;
+    animation: floatUp 10s linear infinite;
+    opacity: 0.5;
+}
+.heart-bg:nth-child(1) { left: 10%; animation-duration: 8s; }
+.heart-bg:nth-child(2) { left: 30%; animation-duration: 12s; }
+.heart-bg:nth-child(3) { left: 50%; animation-duration: 6s; }
+.heart-bg:nth-child(4) { left: 70%; animation-duration: 9s; }
+.heart-bg:nth-child(5) { left: 90%; animation-duration: 11s; }
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 0; }
+    20% { opacity: 0.7; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}

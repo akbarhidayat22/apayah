@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gimana yah ngomongnya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-animation">
+        <div class="heart-bg">❤️</div>
+        <div class="heart-bg">💖</div>
+        <div class="heart-bg">💕</div>
+        <div class="heart-bg">💗</div>
+        <div class="heart-bg">❤️</div>
+    </div>
+
+    <div class="container">
+        <div id="section-intro" class="card">
+            <a href="https://ibb.co.com/39HdkHwp"><img src="https://i.ibb.co.com/39HdkHwp/windah-batubara.jpg" alt="windah-batubara" border="0"></a>            <h1>Hi lydia, I have a question...</h1>
+            <p>Can I ask you something?</p>
+            <button class="btn-primary" onclick="showQuestion()">Open It 💌</button>
+        </div>
+
+        <div id="section-question" class="card hidden">
+            <a href="https://ibb.co.com/zVzVSnG7"><img src="https://i.ibb.co.com/zVzVSnG7/7c8a164c-7bc0-45d4-908e-b62ad2699727.jpg" alt="7c8a164c-7bc0-45d4-908e-b62ad2699727" border="0"></a>            
+            <h1>Will you be my girlfriend? 🥺</h1>
+            <div class="btn-group">
+                <button id="btn-yes" onclick="accepted()">Yes, I will! 😍</button>
+                <button id="btn-no" onmouseover="moveButton()" onclick="rejected()">Nope 😝</button>
+            </div>
+        </div>
+
+        <div id="section-success" class="card hidden">
+            <a href="https://ibb.co.com/dJ4VnQfL"><img src="https://i.ibb.co.com/dJ4VnQfL/kucing.jpg" alt="kucing" border="0"></a>
+            <h1>Yay! I Love You! ❤️</h1>
+            <p>Wait a sec, sending message...</p>
+        </div>
+
+        <div id="section-rejected" class="card hidden">
+            <a href="https://ibb.co.com/HT6YC6F9"><img src="https://i.ibb.co.com/HT6YC6F9/d52611b4-4a26-4e2b-bd47-05792d447b64.jpg" alt="d52611b4-4a26-4e2b-bd47-05792d447b64" border="0"></a>
+            <h1>It's okay... 😔</h1>
+            <p>Thanks for being honest.<br>Sending reply...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
